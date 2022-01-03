@@ -360,9 +360,9 @@ main#home h1 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -370,9 +370,8 @@ main#home h1 {
 }
 
 .boxes div {
-  font-size: 32px;
+  font-size: 27px;
   border: 3px #fff solid;
-  padding: 24px 40px;
   margin-bottom: 48px;
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
