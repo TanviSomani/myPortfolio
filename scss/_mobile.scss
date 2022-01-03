@@ -7,6 +7,12 @@
 	.projects-info {
 		grid-template-columns: repeat(3, 1fr);
 	}
+	.boxes {
+		.data {
+			//color: aqua;
+			font-size: 35px;
+		}
+	}
 }
 
 //Desktop and Laptops
@@ -112,5 +118,14 @@
 
 	.projects-info {
 		grid-template-columns: 1fr;
+	}
+	.boxes {
+		.text-secondary {
+			font-size: 20px;
+		}
+		.data {
+			//color: aqua;
+			font-size: 17px;
+		}
 	}
 }
