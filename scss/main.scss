@@ -1,0 +1,245 @@
+@import "config";
+@import "menu";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	@include background;
+	background: $primary-color;
+	color: #5d001e;
+	height: 100%;
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.5;
+}
+
+//Headings (1 rem = 16px)
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-weight: 400;
+
+	&.lg-heading {
+		font-size: 96px;
+	}
+
+	&.sm-heading {
+		margin-bottom: 32px;
+		padding: 3px 16px;
+		background: rgba(lighten($primary-color, 2.5), 0.5);
+	}
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+header {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+}
+
+.text-secondary {
+	color: $secondary-color;
+}
+
+main {
+	padding: 64px;
+	//height: 100%;
+	min-height: calc(100vh - 60px);
+
+	.icons {
+		margin-top: 16px;
+
+		a {
+			padding: 6.4px;
+
+			&:hover {
+				color: $secondary-color;
+				@include easeOut();
+			}
+		}
+	}
+
+	&#home {
+		overflow: hidden;
+		h1 {
+			margin-top: 20vh;
+		}
+	}
+}
+
+.about-info {
+	display: grid;
+
+	grid-gap: 30px;
+	grid-template-areas:
+		"bioimage bio"
+		"job1 job2";
+
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 35px;
+
+	.bio-image {
+		grid-area: bioimage;
+		margin: auto;
+		border-radius: 50%;
+		border: $secondary-color 3px solid;
+	}
+
+	.bio {
+		grid-area: bio;
+		font-size: 24px;
+	}
+
+	.job-1 {
+		grid-area: job1;
+	}
+
+	.job-2 {
+		grid-area: job2;
+	}
+
+	.job {
+		background: lighten($primary-color, 5);
+		padding: 8px;
+		border-bottom: $secondary-color 5px solid;
+	}
+}
+
+// Work/Projects
+.projects-info {
+	display: grid;
+	grid-gap: 12px;
+	grid-template-columns: repeat(3, 1fr);
+	margin-bottom: 35px;
+
+	img {
+		width: 100%;
+		border: 3px #fff solid;
+
+		&:hover {
+			opacity: 0.5;
+			border-color: $secondary-color;
+			@include easeOut;
+		}
+	}
+}
+
+// Button Styles
+.btn {
+	display: block;
+	padding: 0.5rem 1rem;
+	border: 0;
+	margin-bottom: 0.3rem;
+	&:hover {
+		background: $secondary-color;
+		color: black;
+	}
+}
+
+.btn-dark {
+	@extend .btn;
+	background: darken($primary-color, 50);
+	color: #fff;
+}
+
+.btn-light {
+	@extend .btn;
+	background: lighten($primary-color, 50);
+	color: #333;
+}
+
+#main-footer {
+	text-align: center;
+	padding: 16px;
+	background: darken($primary-color, 10);
+	color: black;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+}
+
+// Contact Page
+.boxes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 16px;
+
+	div {
+		font-size: 32px;
+		border: 3px #fff solid;
+		padding: 24px 40px;
+		margin-bottom: 48px;
+		@include easeOut;
+
+		&:hover {
+			padding: 8px 24px;
+			background: $secondary-color;
+			color: black;
+			span {
+				color: black;
+			}
+		}
+	}
+}
+
+//Skills Page
+.skill-info {
+	display: grid;
+
+	grid-gap: 30px;
+	grid-template-areas:
+		"ds1 be1 ls1"
+		"dv1 af1 sf1";
+
+	grid-template-columns: repeat(3, 1fr);
+	grid-area: bio;
+	font-size: 24px;
+	margin-bottom: 35px;
+
+	.ds-1 {
+		grid-area: ds1;
+	}
+
+	.be-1 {
+		grid-area: be1;
+	}
+
+	.ls-1 {
+		grid-area: ls1;
+	}
+
+	.dv-1 {
+		grid-area: dv1;
+	}
+
+	.af-1 {
+		grid-area: af1;
+	}
+
+	.sf-1 {
+		grid-area: sf1;
+	}
+
+	.skill {
+		background: lighten($primary-color, 5);
+		padding: 8px;
+		border-bottom: $secondary-color 5px solid;
+
+		h3 {
+			text-decoration: underline;
+			color: $secondary-color;
+		}
+	}
+}
+
+@import "mobile";

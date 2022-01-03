@@ -1,0 +1,14 @@
+{
+	"name": "sass-assignment",
+	"version": "1.0.0",
+	"description": "Responsive Portfolio",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass scss/:dist/css/"
+	},
+	"author": "Tanvi Somani",
+	"license": "MIT",
+	"dependencies": {
+		"sass": "^1.45.2"
+	}
+}
