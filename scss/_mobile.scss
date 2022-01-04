@@ -7,6 +7,10 @@
 
 	.projects-info {
 		grid-template-columns: repeat(3, 1fr);
+
+		.item {
+			margin-left: 75px;
+		}
 	}
 	.boxes {
 		.data {
@@ -24,6 +28,7 @@
 	}
 	.projects-info {
 		grid-template-columns: repeat(3, 1fr);
+		justify-content: center;
 	}
 }
 
@@ -96,6 +101,7 @@
 
 	.projects-info {
 		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
 	}
 }
 
@@ -133,7 +139,9 @@
 
 	.projects-info {
 		grid-template-columns: 1fr;
+		justify-content: center;
 	}
+
 	.boxes {
 		.text-secondary {
 			font-size: 20px;
