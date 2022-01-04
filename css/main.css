@@ -40,7 +40,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   visibility: hidden;
 }
 
@@ -124,9 +124,8 @@
 .menu .nav-link {
   display: inline-block;
   position: relative;
-  font-size: 30px;
+  font-size: 27px;
   text-transform: uppercase;
-  padding: 16px 0;
   color: black;
   text-decoration: none;
   -webkit-transition: all 1s ease-out;
@@ -160,6 +159,11 @@
 .nav-item:nth-child(5) {
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+}
+
+.nav-item:nth-child(6) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 
 * {
@@ -279,7 +283,7 @@ main#home h1 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: bio;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .about-info .job-1 {
@@ -300,6 +304,76 @@ main#home h1 {
   border-bottom: #ee4c7c 5px solid;
 }
 
+.about-info .job h3 {
+  font-size: 25px;
+}
+
+.about-info .job h4 {
+  font-size: 20px;
+}
+
+.about-info .job p {
+  font-size: 15px;
+}
+
+.edu-info {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+      grid-template-areas: "edu1 edu2";
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 35px;
+}
+
+.edu-info .edu-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: edu1;
+}
+
+.edu-info .edu-1 .eduImg {
+  margin-top: 25px;
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edu-info .edu-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: edu2;
+}
+
+.edu-info .edu-2 .eduImg {
+  margin-top: 25px;
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edu-info .edu {
+  background: #efeeed;
+  padding: 8px;
+  border-bottom: #ee4c7c 5px solid;
+}
+
+.edu-info .edu h3 {
+  font-size: 25px;
+}
+
+.edu-info .edu h4 {
+  font-size: 20px;
+}
+
+.edu-info .edu p {
+  font-size: 15px;
+}
+
 .projects-info {
   display: -ms-grid;
   display: grid;
@@ -310,7 +384,6 @@ main#home h1 {
 }
 
 .projects-info img {
-  width: 100%;
   border: 3px #fff solid;
 }
 
@@ -329,7 +402,6 @@ main#home h1 {
 }
 
 .btn:hover, .btn-dark:hover, .btn-light:hover {
-  background: #ee4c7c;
   color: black;
 }
 
@@ -519,6 +591,11 @@ main#home h1 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .edu-info {
+        grid-template-areas: "edu1" "edu2";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
   .skill-info {
         grid-template-areas: "ds1 be1" "ls1 dv1" "af1 sf1";
     -ms-grid-columns: (1fr)[2];
@@ -539,7 +616,10 @@ main#home h1 {
   }
   main .lg-heading {
     margin-top: 16px;
-    font-size: 80px;
+    font-size: 60px;
+  }
+  .about-info .bio {
+    font-size: 18px;
   }
   .skill-info {
         grid-template-areas: "ds1" "be1" "ls1" "dv1" "af1" "sf1";
@@ -555,6 +635,9 @@ main#home h1 {
   }
   .boxes .data {
     font-size: 17px;
+  }
+  .boxes .fas {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
