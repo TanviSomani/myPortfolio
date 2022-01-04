@@ -4,6 +4,7 @@
 		transform: translate3d(-100%, 0, 0);
 		font-size: 24px;
 	}
+
 	.projects-info {
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -76,6 +77,14 @@
 		grid-template-columns: 1fr;
 	}
 
+	.edu-info {
+		grid-template-areas:
+			"edu1"
+			"edu2";
+
+		grid-template-columns: 1fr;
+	}
+
 	.skill-info {
 		grid-template-areas:
 			"ds1 be1"
@@ -100,7 +109,13 @@
 
 		.lg-heading {
 			margin-top: 16px;
-			font-size: 80px;
+			font-size: 60px;
+		}
+	}
+
+	.about-info {
+		.bio {
+			font-size: 18px;
 		}
 	}
 
@@ -126,6 +141,9 @@
 		.data {
 			//color: aqua;
 			font-size: 17px;
+		}
+		.fas {
+			font-size: 20px;
 		}
 	}
 }
