@@ -384,14 +384,59 @@ main#home h1 {
 }
 
 .projects-info img {
+  width: 100%;
   border: 3px #fff solid;
 }
 
 .projects-info img:hover {
-  opacity: 0.5;
   border-color: #ee4c7c;
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
+}
+
+.projects-info .flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 250px;
+  border: 1px solid #f1f1f1;
+}
+
+.projects-info .flip-box-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.projects-info .flip-box:hover .flip-box-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.projects-info .flip-box-front,
+.projects-info .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.projects-info .flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.projects-info .flip-box-back {
+  color: #ee4c7c;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .btn, .btn-dark, .btn-light {
@@ -408,11 +453,14 @@ main#home h1 {
 .btn-dark {
   background: #68655b;
   color: #fff;
+  width: 300px;
 }
 
 .btn-light {
   background: white;
   color: #333;
+  margin-top: 20px;
+  width: 300px;
 }
 
 #main-footer {
@@ -531,6 +579,9 @@ main#home h1 {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+  .projects-info .item {
+    margin-left: 75px;
+  }
   .boxes .data {
     font-size: 35px;
   }
@@ -545,6 +596,9 @@ main#home h1 {
   .projects-info {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -604,6 +658,9 @@ main#home h1 {
   .projects-info {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -629,6 +686,9 @@ main#home h1 {
   .projects-info {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .boxes .text-secondary {
     font-size: 20px;
